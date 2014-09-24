@@ -40,6 +40,7 @@ init_log_plex_fifo() {
   for log_file in $*; do
     echo "rm -f ${log_file}"
     echo "mkfifo ${log_file}"
+    echo "chown nobody: ${log_file}"
   done
 }
 
@@ -49,6 +50,7 @@ init_log_plex() {
   done
   for log_file in $*; do
     echo "touch ${log_file}"
+    echo "chown nobody: ${log_file}"
   done
 }
 
