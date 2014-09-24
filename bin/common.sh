@@ -50,7 +50,6 @@ init_log_plex() {
   done
   for log_file in $*; do
     echo "touch ${log_file}"
-    echo "chown nobody: ${log_file}"
   done
 }
 
