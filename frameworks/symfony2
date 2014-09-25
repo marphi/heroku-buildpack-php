@@ -26,11 +26,7 @@ case "$1" in
         fi
         ;;
     get-log-files)
-        if [ ! -d "var/logs" ]; then
-            echo "var/logs/prod.log" "var/logs/dev.log"
-        else
-            echo "app/logs/prod.log" "app/logs/dev.log"
-        fi
+        echo "/app/var/logs/prod.log" "/app/var/logs/dev.log"
         ;;
     compile)
         echo "-----> Setting up Symfony2 app"
